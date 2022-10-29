@@ -2,21 +2,29 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="icon"
-      href="https://cdn-icons-png.flaticon.com/512/4087/4087669.png"
-    />
     <title>مؤشر وزن الجسم</title>
     <script defer src="./script.js"></script>
   </head>
   <body>
+
     <div class="container">
-      <h2>!اضغط علي</h2>
-      <section>
+      <h2 id="todo">To do List</h2>
+      <section class="todo_sec">
+      <input id="task" type="text" placeholder="Your Task">
+      <button id="add" onclick="add()">add</button>
+      <button id="del" onclick="del()">del</button>
+    </section>
+    <ul id="list">
+    </ul>
+    </div>
+
+    <div class="container1"> 
+      <h2 onmouseover="alert(status(BMI(80, 1.8)))">!اضغط علي</h2>
+      <section class="bmi_sec">
         <input id="weight" type="number" placeholder="الوزن بالكيلوجرام" />
         <input id="height" type="number" placeholder="الطول بالمتر" />
         <div id="result"></div>
-        <button>احسب</button>
+        <button onclick="calculate()">احسب</button>
       </section>
     </div>
   </body>
